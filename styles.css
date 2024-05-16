@@ -1,0 +1,395 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .section-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .section:nth-child(odd) {
+    background-color: #ccc;
+  }
+  
+  .section {
+    background-size: cover;
+    background-position: center;
+  }
+  
+ /* Default background image for section one */
+
+ /*......................................................SECTION 1 .............................................................*/
+
+#section1 {
+    background-image: url('background1.JPG');
+    display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-end; /* Align children to the bottom */
+}
+#section1 h2 {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  /* Media query for desktop */
+  @media (min-width: 768px) {
+    #section1 {
+      background-image: url('background1.JPG');
+    }
+      /* Styling for h1 */
+#section1 h1 {
+    font-size: 2rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+
+    /* Styling for h1 */
+#section1 h2 {
+    font-size: 5rem; /* Adjust font size as needed */
+    margin-top: 1px; /* Add some space below the heading */
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+  
+  /* Styling for p */
+  #section1 p {
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+  }
+  
+  /* Media query for mobile */
+  @media (max-width: 767px) {
+    #section1 {
+      background-image: url('background1_1.JPG');
+    }
+    /* Styling for h1 on mobile */
+  #section1 h1 {
+    font-size: 1rem; /* Adjust font size for mobile */
+    bottom: 20px; /* Adjust bottom spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+  #section1 h2 {
+    font-size: 3rem; /* Adjust font size for mobile */
+    margin-top: 2px; /* Add some space below the heading */
+    margin-bottom: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  }
+  /* Styling for p on mobile */
+  #section1 p {
+    font-size: 1rem; /* Adjust font size for mobile */
+    bottom: 0; /* Align p to the bottom */
+    margin-top: 0;
+  }
+  }
+
+/*......................................................SECTION 2 .............................................................*/
+
+  #section2 {
+    background-color: #f8f8f8; /* Add beige background color */
+    text-align: center; /* Center align content */
+    padding: 50px 0; /* Add padding to top and bottom */
+    color: black;
+  }
+  
+  .profile {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center align children vertically */
+  }
+  
+  .profile-item {
+    width: calc(50% - 30px); /* Adjust width of each profile item */
+    /* Subtracting 30px to account for margins */
+    margin: 0 15px 20px; /* Add margin to both sides of each profile item and bottom margin */
+  }
+  
+  .profile-item:first-child {
+    margin-right: 120px; /* Add margin to the right of the first profile item */
+  }
+  
+  .profile-item:last-child {
+    margin-left: 120px; /* Add margin to the left of the last profile item */
+  }
+   
+  @media (max-width: 767px) {
+    .profile {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center; /* Center align items on mobile */
+    }
+  
+    .profile-item {
+      width: calc(100% - 30px); /* Adjust width to full width */
+    }
+  
+    .profile-item:first-child,
+    .profile-item:last-child {
+      margin-right: 0; /* Remove margin from the first and last profile item */
+      margin-left: 0; /* Remove margin from the first and last profile item */
+    }
+  
+    .profile-item + .profile-item {
+      margin-top: 20px; /* Add top margin to separate profile items */
+    }
+  }  
+
+  .profile-image {
+    width: 200px; /* Increase the width of the circular image container */
+    height: 200px; /* Increase the height of the circular image container */
+    border-radius: 50%; /* Create circular shape */
+    overflow: hidden; /* Hide overflow */
+    margin: 0 auto 20px; /* Center image and add space below */
+  }
+  
+  .profile-image img {
+    width: 100%; /* Ensure image fills its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .profile-details h2 {
+    margin-bottom: 5px; /* Add space below name */
+    
+  }
+  
+  .profile-details p {
+    margin: 5px 0; /* Add space above and below each detail */
+    font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  }
+  
+  .profile-details a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .profile-details img {
+    margin-right: 5px; /* Add left margin to create space between the logo and username */
+    margin-top: 5px;
+  }
+  
+  
+  .profile-details a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+  
+/*......................................................SECTION 3 .............................................................*/
+
+#section3 {
+  background-image: url('background3.JPG');
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+}
+
+#countdown {
+  text-align: center;
+  margin-bottom: 100px; /* Add margin to bottom of countdown */
+  margin-top: 50px;
+}
+
+#timer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px; /* Add margin to top of countdown */
+
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown-number {
+  font-size: 2em; /* Adjust font size as needed */
+}
+
+.countdown-label {
+  font-size: 1em; /* Adjust font size as needed */
+  color: #888; /* Adjust color as needed */
+}
+
+#quran-ayah {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.quran-text {
+  font-size: 160%;
+}
+
+@media (max-width: 767px) {
+
+  .countdown-label{
+    padding-left:5px;
+    padding-right:5px;
+  }
+  /* Styles for Quran ayah */
+  #quran-ayah {
+    text-align: center;
+  }
+
+  .quran-text {
+    font-size:120%;
+  }
+
+  .translation {
+    font-size:90%;
+    font-style: italic;
+    font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  }
+}
+
+/*......................................................SECTION 4 .............................................................*/
+
+#section4 {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.section4 {
+  max-width: 800px;
+  margin: 0 auto;
+  color:black;
+}
+
+.event-container {
+  margin-bottom: 20px;
+}
+
+.event-info {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.event-info h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.event-info p {
+  margin: 0;
+}
+
+
+
+
+/* SECTION 5 */
+/* Section 5 Styles */
+#section5 {
+  background-color: #f8f8f8;
+  padding: 50px 0;
+}
+
+.section5 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section 5 Title Style */
+.section5 h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#greeting-form {
+  margin-bottom: 30px;
+}
+
+#sender-name,
+#greeting-message {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#greeting-message {
+  height: 120px;
+}
+
+#greeting-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#greeting-form button:hover {
+  background-color: #0056b3;
+}
+
+.comments-container {
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+}
+
+.comment {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment p strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+
+
+  /* Add similar background styles for other sections */
+  
